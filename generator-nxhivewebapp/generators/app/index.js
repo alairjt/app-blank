@@ -1,20 +1,19 @@
 'use strict';
 var yeoman = require('yeoman-generator');
-var chalk = require('chalk');
 var yosay = require('yosay');
+var utils = require('./utils.js');
+var shell = require('shelljs');
 
 module.exports = yeoman.generators.Base.extend({
     prompting: function () {
         var done = this.async();
 
-        this.log(yosay(
-                'Bem vindo ao ' + chalk.red('NexxeraBlankWeb')
-                ));
-
+        this.log(utils.nexxSay());
+        
         var prompts = [{
                 type: 'text',
                 name: 'appName',
-                message: 'Informe o nome da aplicação'
+                message: 'Nome da aplicação'
                         //default: //@TODO: Pegar nome do diretório
             }];
 
@@ -28,6 +27,7 @@ module.exports = yeoman.generators.Base.extend({
         this.directory(this.templatePath('blank-app'), this.destinationPath());
     },
     install: function () {
-        //this.installDependencies();
+        shell.cd('config');
+        this.installDependencies();
     }
 });

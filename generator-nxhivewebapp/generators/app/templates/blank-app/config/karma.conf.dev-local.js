@@ -31,8 +31,8 @@ module.exports = function (config) {
             
             'src/app/*.js',
             
-            '/HiveCommon/scripts-commons.js',
-            '/NexxeraComponents/scripts-nexxera.js',
+            'https://aenhive-dev.nexxera.com/Library/hivecommon-1.0.2/scripts-commons.js',
+            'https://aenhive-dev.nexxera.com/Library/nexxeraComponents-1.2.0/scripts-nexxera.js',
 
             'test/testMockRun.js',
             'src/app/*.js',
