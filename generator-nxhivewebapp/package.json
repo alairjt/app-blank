@@ -1,14 +1,14 @@
 {
   "name": "generator-nxhivewebapp",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Yeoman generator",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "alairjt/generator-nxhivewebapp",
   "author": {
-    "name": "",
-    "email": "",
-    "url": ""
+    "name": "Alair Júnior",
+    "email": "alairjt@gmail.com",
+    "url": "https://github.com/alairjt"
   },
   "scripts": {
     "test": "mocha"
