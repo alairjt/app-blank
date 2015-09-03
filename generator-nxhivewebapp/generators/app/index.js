@@ -7,15 +7,20 @@ var shell = require('shelljs');
 module.exports = yeoman.generators.Base.extend({
     prompting: function () {
         var done = this.async();
-
+        
         this.log(utils.nexxSay());
         
         var prompts = [{
-                type: 'text',
-                name: 'appName',
-                message: 'Nome da aplicação'
-                        //default: //@TODO: Pegar nome do diretório
-            }];
+            type: 'text',
+            name: 'appName',
+            message: 'Nome da aplicação',
+            default: process.cwd().split("\\").pop()
+        }, {
+            type: 'confirm',
+            name: 'installDependencies',
+            message: 'Instalar dependencias?',
+            default: true
+        }];
 
         this.prompt(prompts, function (props) {
             this.props = props;
@@ -27,7 +32,9 @@ module.exports = yeoman.generators.Base.extend({
         this.directory(this.templatePath('blank-app'), this.destinationPath());
     },
     install: function () {
-        shell.cd('config');
-        this.installDependencies();
+        if (this.props.installDependencies) {
+            shell.cd('config');
+            this.installDependencies();
+        }
     }
 });
