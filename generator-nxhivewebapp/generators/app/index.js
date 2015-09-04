@@ -1,14 +1,13 @@
 'use strict';
 var yeoman = require('yeoman-generator');
-var yosay = require('yosay');
-var utils = require('./utils.js');
+var utils = require('nx-utils');
 var shell = require('shelljs');
 
 module.exports = yeoman.generators.Base.extend({
     prompting: function () {
         var done = this.async();
         
-        this.log(utils.nexxSay());
+        this.log(utils.nexxSay("Hive App Generator"));
         
         var prompts = [{
             type: 'text',

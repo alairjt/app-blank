@@ -33,7 +33,9 @@
 "\n\n";
     };
 
-    module.exports = {
-        nexxSay: nexxSay
+    module.exports = function () {
+        return {
+            nexxSay: nexxSay
+        };
     };
 })();
