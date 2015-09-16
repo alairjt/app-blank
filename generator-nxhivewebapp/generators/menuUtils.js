@@ -40,6 +40,20 @@
             "id": menu.toLowerCase().concat("-").concat(subMenuName.toLowerCase())
         };
     };
+    
+    var menuExists = function (menuName) {
+        var menu = parserMenuJson();
+        var retorno = false;
+        
+        for (var key in menu.menus) {
+            if (menu.menus[key].nome === capitalize(menuName)) {
+                retorno = true;
+                break;
+            }
+        }
+        
+        return retorno;
+    };
 
     var addSubMenu = function (subMenuName, nomeMenu) {
         var menu = parserMenuJson();
@@ -80,6 +94,7 @@
         addSubMenu: addSubMenu,
         getMenus: getMenus,
         createSubMenu: createSubMenu,
-        parserMenuJson: parserMenuJson
+        parserMenuJson: parserMenuJson,
+        menuExists: menuExists
     };
 })();

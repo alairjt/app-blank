@@ -1,6 +1,6 @@
 {
   "name": "generator-nxhivewebapp",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "Web App Hive Generator",
   "license": "MIT",
   "main": "app/index.js",

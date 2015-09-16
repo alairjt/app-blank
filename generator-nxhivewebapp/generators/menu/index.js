@@ -11,6 +11,11 @@ module.exports = yeoman.generators.Base.extend({
         this.argument('menuName', {type: String, required: true});
     },
     execute: function () {
+        if (menuUtils.menuExists(this.menuName)) {
+            this.log("Menu already exists");
+            return;
+        }
+
         menuUtils.addMenu(this.menuName);
         this.log("Menu created");
         this.log("Add following code in app/route.js");
