@@ -7,8 +7,9 @@ module.exports = yeoman.generators.Base.extend({
     constructor: function () {
         yeoman.generators.Base.apply(this, arguments);
         
-        this.argument('appName', { type: String, required: false });
         this.option('install');
+        this.option('noinstall'); //Todo: Aplicar
+        this.argument('appName', { type: String, required: false });
     },
     prompting: function () {
         var self = this;
