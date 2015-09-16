@@ -1,12 +1,12 @@
 {
   "name": "generator-nxhivewebapp",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Web App Hive Generator",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "alairjt/generator-nxhivewebapp",
+  "repository": "alairjt/app-blank",
   "author": {
-    "name": "Alair Júnior",
+    "name": "Alair Tavares (Júnior)",
     "email": "alairjt@gmail.com",
     "url": "https://github.com/alairjt"
   },
